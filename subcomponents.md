@@ -30,7 +30,7 @@ construct the subcomponent.
 
 ```java
 @Subcomponent(modules = RequestModule.class)
-inferface RequestComponent {
+interface RequestComponent {
   RequestHandler requestHandler();
 
   @Subcomponent.Builder
