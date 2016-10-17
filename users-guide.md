@@ -224,7 +224,7 @@ $ java -cp ... coffee.CoffeeApp
 #### Bindings in the graph
 
 The example above shows how to construct a component with some of the more
-typcial bindings, but there are a variety of mechanisms for contributing
+typical bindings, but there are a variety of mechanisms for contributing
 bindings to the graph.  The following are available as dependencies and may be
 used to generate a well-formed component:
 
