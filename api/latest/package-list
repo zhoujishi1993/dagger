@@ -1,5 +1,4 @@
 dagger
-dagger.android
 dagger.multibindings
 dagger.producers
 dagger.producers.monitoring
