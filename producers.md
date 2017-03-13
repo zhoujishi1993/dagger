@@ -157,12 +157,12 @@ in [ordinary Dagger](multibindings.md). For example:
 ```java
 @ProducerModule
 final class UserDataModule {
-  @Produces @IntoSet static ListenableFuture<Data> standardData(…) { … }
-  @Produces @IntoSet static ListenableFuture<Data> extraData(…) { … }
-  @Produces @IntoSet static Data synchronousData(…) { … }
-  @Produces @ElementsIntoSet static Set<ListenableFuture<Data>> rest(…) { … }
+  @Produces @IntoSet static ListenableFuture<Data> standardData(...) { ... }
+  @Produces @IntoSet static ListenableFuture<Data> extraData(...) { ... }
+  @Produces @IntoSet static Data synchronousData(...) { ... }
+  @Produces @ElementsIntoSet static Set<ListenableFuture<Data>> rest(...) { ... }
 
-  @Produces static … collect(Set<Data> data) { … }
+  @Produces static ... collect(Set<Data> data) { ... }
 }
 ```
 
@@ -182,10 +182,10 @@ Map multibindings are similar to set multibindings:
 @ProducerModule
 final class DispatchModule {
   @Produces @IntoMap @DispatchPath("/user")
-  static ListenableFuture<Html> dispatchUser(…) { … }
+  static ListenableFuture<Html> dispatchUser(...) { ... }
 
   @Produces @IntoMap @DispatchPath("/settings")
-  static ListenableFuture<Html> dispatchSettings(…) { … }
+  static ListenableFuture<Html> dispatchSettings(...) { ... }
 
   @Produces
   static ListenableFuture<Html> dispatch(
@@ -237,7 +237,8 @@ interface RequestComponent {
 
 @ProducerModule
 final class UserDataModule {
-  @Produces static ListenableFuture<UserData> userData(Request request, …) { … }
+  @Produces static ListenableFuture<UserData> userData(
+      Request request, ...) { ... }
 }
 
 @ProductionComponent(

@@ -123,13 +123,13 @@ interface RootComponent {
 }
 
 @RootScope @Subcomponent
-interface BadChildComponent {…}
+interface BadChildComponent {...}
 
 @ChildScope @Subcomponent
-interface SiblingComponentOne {…}
+interface SiblingComponentOne {...}
 
 @ChildScope @Subcomponent
-interface SiblingComponentTwo {…}
+interface SiblingComponentTwo {...}
 ```
 
 Because a subcomponent is created from within its parent, its lifetime is
@@ -156,10 +156,10 @@ interface SessionComponent {
 }
 
 @RequestScope @Subcomponent
-interface FooRequestComponent {…}
+interface FooRequestComponent {...}
 
 @RequestScope @Subcomponent
-interface BarRequestComponent {…}
+interface BarRequestComponent {...}
 ```
 
 ## Subcomponents for encapsulation
@@ -325,16 +325,16 @@ method defines a repeated module as a parameter. (The former cannot be checked
 at compile time, and is thus a runtime error.)
 
 ```java
-@Component(modules = {RepeatedModule.class, …})
+@Component(modules = {RepeatedModule.class, ...})
 interface ComponentOne {
   ComponentTwo componentTwo(RepeatedModule repeatedModule); // COMPILE ERROR!
   ComponentThree.Builder componentThreeBuilder();
 }
 
-@Subcomponent(modules = {RepeatedModule.class, …})
-interface ComponentTwo { … }
+@Subcomponent(modules = {RepeatedModule.class, ...})
+interface ComponentTwo { ... }
 
-@Subcomponent(modules = {RepeatedModule.class, …})
+@Subcomponent(modules = {RepeatedModule.class, ...})
 interface ComponentThree {
   @Subcomponent.Builder
   interface Builder {

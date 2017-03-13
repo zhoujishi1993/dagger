@@ -88,7 +88,7 @@ class MyModuleC {
 @Module
 class MyModuleD {
   @Provides
-  static FooSetUser provideFooSetUser(@MyQualifier Set<Foo> foos) { … }
+  static FooSetUser provideFooSetUser(@MyQualifier Set<Foo> foos) { ... }
 }
 ```
 
@@ -261,16 +261,16 @@ transform into a non-multibound map.
 @Module
 class MyModule {
   @Provides @IntoSet
-  static Map.Entry<Foo, Bar> entryOne(…) {
-    Foo key = …;
-    Bar value = …;
+  static Map.Entry<Foo, Bar> entryOne(...) {
+    Foo key = ...;
+    Bar value = ...;
     return new SimpleImmutableEntry(key, value);
   }
 
   @Provides @IntoSet
-  static Map.Entry<Foo, Bar> entryTwo(…) {
-    Foo key = …;
-    Bar value = …;
+  static Map.Entry<Foo, Bar> entryTwo(...) {
+    Foo key = ...;
+    Bar value = ...;
     return new SimpleImmutableEntry(key, value);
   }
 }
@@ -299,7 +299,7 @@ class MyModule {
   @Provides @IntoSet
   static Map.Entry<Foo, Provider<Bar>> entry(
       Provider<BarSubclass> barSubclassProvider) {
-    Foo key = …;
+    Foo key = ...;
     return new SimpleImmutableEntry(key, barSubclassProvider);
   }
 }
@@ -309,7 +309,7 @@ class MyProviderMapModule {
   @Provides
   static Map<Foo, Provider<Bar>> fooBarProviderMap(
       Set<Map.Entry<Foo, Provider<Bar>>> entries) {
-    return …;
+    return ...;
   }
 }
 ```
