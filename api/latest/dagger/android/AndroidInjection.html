@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -133,15 +133,37 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.app.Activity-">inject</a></span>(<a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</code>
-<div class="block">Injects <code>activity</code> if an associated <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> implementation can be
- found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+<div class="block">Injects <code>activity</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.app.Fragment-">inject</a></span>(<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&nbsp;fragment)</code>
-<div class="block">Injects <code>fragment</code> if an associated <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> implementation can be
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.content.BroadcastReceiver-android.content.Context-">inject</a></span>(<a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a>&nbsp;broadcastReceiver,
+      <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</code>
+<div class="block">Injects <code>broadcastReceiver</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can
+ be found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.content.ContentProvider-">inject</a></span>(<a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a>&nbsp;contentProvider)</code>
+<div class="block">Injects <code>contentProvider</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be
  found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.app.Fragment-">inject</a></span>(<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&nbsp;fragment)</code>
+<div class="block">Injects <code>fragment</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../dagger/android/AndroidInjection.html#inject-android.app.Service-">inject</a></span>(<a href="https://developer.android.com/reference/android/app/Service.html?is-external=true" title="class or interface in android.app">Service</a>&nbsp;service)</code>
+<div class="block">Injects <code>service</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -173,39 +195,86 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>inject</h4>
 <pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&nbsp;activity)</pre>
-<div class="block">Injects <code>activity</code> if an associated <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> implementation can be
- found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+<div class="block">Injects <code>activity</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> doesn't implement <a href="../../dagger/android/HasDispatchingActivityInjector.html" title="interface in dagger.android"><code>HasDispatchingActivityInjector</code></a>, or if no <code>AndroidInjector.Factory&lt;Activity, ?&gt;</code> is
-     bound for <code>activity</code>.</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> doesn't implement <a href="../../dagger/android/HasActivityInjector.html" title="interface in dagger.android"><code>HasActivityInjector</code></a>.</dd>
 </dl>
 </li>
 </ul>
 <a name="inject-android.app.Fragment-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>inject</h4>
 <pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&nbsp;fragment)</pre>
-<div class="block">Injects <code>fragment</code> if an associated <a href="../../dagger/android/AndroidInjector.Factory.html" title="interface in dagger.android"><code>AndroidInjector.Factory</code></a> implementation can be
- found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.
+<div class="block">Injects <code>fragment</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.
 
- <p>Uses the following algorithm to find the appropriate <code>DispatchingAndroidInjector&lt;Fragment&gt;</code> to inject <code>fragment</code>:
+ <p>Uses the following algorithm to find the appropriate <code>AndroidInjector&lt;Fragment&gt;</code> to
+ use to inject <code>fragment</code>:
 
  <ol>
-   <li>Walks the parent-fragment hierarchy to find the a fragment that implements <a href="../../dagger/android/HasDispatchingFragmentInjector.html" title="interface in dagger.android"><code>HasDispatchingFragmentInjector</code></a>, and if none do
+   <li>Walks the parent-fragment hierarchy to find the a fragment that implements <a href="../../dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><code>HasFragmentInjector</code></a>, and if none do
    <li>Uses the <code>fragment</code>'s <a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true#getActivity--" title="class or interface in android.app"><code>activity</code></a> if it implements
-       <a href="../../dagger/android/HasDispatchingFragmentInjector.html" title="interface in dagger.android"><code>HasDispatchingFragmentInjector</code></a>, and if not
-   <li>Uses the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> if it implements <a href="../../dagger/android/HasDispatchingFragmentInjector.html" title="interface in dagger.android"><code>HasDispatchingFragmentInjector</code></a>.
+       <a href="../../dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><code>HasFragmentInjector</code></a>, and if not
+   <li>Uses the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> if it implements <a href="../../dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><code>HasFragmentInjector</code></a>.
  </ol>
 
- If none of them implement <a href="../../dagger/android/HasDispatchingFragmentInjector.html" title="interface in dagger.android"><code>HasDispatchingFragmentInjector</code></a>, a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> is thrown.</div>
+ If none of them implement <a href="../../dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><code>HasFragmentInjector</code></a>, a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a> is
+ thrown.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if no <code>AndroidInjector.Factory&lt;Fragment, ?&gt;</code> is bound
-     for <code>fragment</code>.</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if no parent fragment, activity, or application implements
+     <a href="../../dagger/android/HasFragmentInjector.html" title="interface in dagger.android"><code>HasFragmentInjector</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="inject-android.app.Service-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inject</h4>
+<pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/app/Service.html?is-external=true" title="class or interface in android.app">Service</a>&nbsp;service)</pre>
+<div class="block">Injects <code>service</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be found,
+ otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> doesn't implement <a href="../../dagger/android/HasServiceInjector.html" title="interface in dagger.android"><code>HasServiceInjector</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="inject-android.content.BroadcastReceiver-android.content.Context-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>inject</h4>
+<pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a>&nbsp;broadcastReceiver,
+                          <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</a>&nbsp;context)</pre>
+<div class="block">Injects <code>broadcastReceiver</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can
+ be found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> from <a href="https://developer.android.com/reference/android/content/Context.html?is-external=true#getApplicationContext--" title="class or interface in android.content"><code>Context.getApplicationContext()</code></a> doesn't implement <a href="../../dagger/android/HasBroadcastReceiverInjector.html" title="interface in dagger.android"><code>HasBroadcastReceiverInjector</code></a>.</dd>
+</dl>
+</li>
+</ul>
+<a name="inject-android.content.ContentProvider-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>inject</h4>
+<pre>public static&nbsp;void&nbsp;inject(<a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a>&nbsp;contentProvider)</pre>
+<div class="block">Injects <code>contentProvider</code> if an associated <a href="../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> implementation can be
+ found, otherwise throws an <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang"><code>IllegalArgumentException</code></a>.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code> - if the <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app"><code>Application</code></a> doesn't implement <a href="../../dagger/android/HasContentProviderInjector.html" title="interface in dagger.android"><code>HasContentProviderInjector</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -278,6 +347,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012���2017 The Dagger Authors. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

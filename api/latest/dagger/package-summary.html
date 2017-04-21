@@ -71,8 +71,8 @@
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;dagger</h1>
 <div class="docSummary">
-<div class="block">This package contains the public API for the <a href="http://google.github.io/dagger/">Dagger
- 2</a> dependency injection framework.</div>
+<div class="block">This package contains the public API for the <a href="https://google.github.io/dagger/">Dagger 2</a> dependency
+ injection framework.</div>
 </div>
 <p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
@@ -145,8 +145,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../dagger/MapKey.html" title="annotation in dagger">MapKey</a></td>
 <td class="colLast">
-<div class="block">Identifies annotation types that are used to associate keys with values returned by
- <a href="../dagger/Provides.html" title="annotation in dagger">provider methods</a> in order to compose a <a href="../dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings">map</a>.</div>
+<div class="block">Identifies annotation types that are used to associate keys with values returned by <a href="../dagger/Provides.html" title="annotation in dagger">provider methods</a> in order to compose a <a href="../dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings">map</a>.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -156,31 +155,25 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../dagger/Multibindings.html" title="annotation in dagger">Multibindings</a></td>
-<td class="colLast">
-<div class="block">Annotates interfaces that declare multibindings.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a href="../dagger/Provides.html" title="annotation in dagger">Provides</a></td>
 <td class="colLast">
 <div class="block">Annotates methods of a <a href="../dagger/Module.html" title="annotation in dagger">module</a> to create a provider method binding.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../dagger/Reusable.html" title="annotation in dagger">Reusable</a></td>
 <td class="colLast">
 <div class="block">A scope that indicates that the object returned by a binding may be (but might not be) reused.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../dagger/Subcomponent.html" title="annotation in dagger">Subcomponent</a></td>
 <td class="colLast">
 <div class="block">A subcomponent that inherits the bindings from a parent <a href="../dagger/Component.html" title="annotation in dagger"><code>Component</code></a> or
  <a href="../dagger/Subcomponent.html" title="annotation in dagger"><code>Subcomponent</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../dagger/Subcomponent.Builder.html" title="annotation in dagger">Subcomponent.Builder</a></td>
 <td class="colLast">
 <div class="block">A builder for a subcomponent.</div>
@@ -194,21 +187,18 @@
 <!--   -->
 </a>
 <h2 title="Package dagger Description">Package dagger Description</h2>
-<div class="block">This package contains the public API for the <a href="http://google.github.io/dagger/">Dagger
- 2</a> dependency injection framework.  By building upon
- <a href="https://jcp.org/en/jsr/detail?id=330">JSR 330</a>, Dagger 2 provides an
- annotation-driven API for dependency injection whose implementation is entirely generated at
- compile time by <a href="http://en.wikipedia.org/wiki/Java_annotation#Processing">annotation
- processors</a>.
+<div class="block">This package contains the public API for the <a href="https://google.github.io/dagger/">Dagger 2</a> dependency
+ injection framework. By building upon <a href="https://jcp.org/en/jsr/detail?id=330">JSR 330</a>,
+ Dagger 2 provides an annotation-driven API for dependency injection whose implementation is
+ entirely generated at compile time by <a
+ href="http://en.wikipedia.org/wiki/Java_annotation#Processing">annotation processors</a>.
 
  <p>The entry point into the API is the <code>Component</code>, which annotates abstract types for
- Dagger 2 to implement.  The dependency graph is configured using using annotations such as
- <code>Module</code>, <code>Provides</code> and <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>.
+ Dagger 2 to implement. The dependency graph is configured using using annotations such as <code>Module</code>, <code>Provides</code> and <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>Inject</code></a>.
 
  <p><code>dagger.internal.codegen.ComponentProcessor</code> is the processor responsible for generating
- the implementation.  Dagger uses the annotation procesor
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html?is-external=true" title="class or interface in java.util">service loader</a> to automatically configure the processor, so
- explict build configuration shouldn't be necessary.</div>
+ the implementation. Dagger uses the annotation procesor <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html?is-external=true" title="class or interface in java.util">service loader</a> to automatically configure the processor, so explict build configuration
+ shouldn't be necessary.</div>
 </div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">
@@ -257,6 +247,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012���2017 The Dagger Authors. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

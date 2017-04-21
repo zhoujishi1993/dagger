@@ -102,8 +102,10 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">Lazy&lt;T&gt;</span></pre>
 <div class="block">A handle to a lazily-computed value. Each <code>Lazy</code> computes its value on
- the first call to <code>get()</code> and remembers that same value for all
+ the first call to <a href="../dagger/Lazy.html#get--"><code>get()</code></a> and remembers that same value for all
  subsequent calls to <code>get()</code>.
+
+ <p>All implementations are expected to be thread-safe and compute their value at most once.
 
  <h2>Example</h2>
  The differences between <strong>direct injection</strong>, <strong>provider
@@ -341,6 +343,6 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012���2017 The Dagger Authors. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

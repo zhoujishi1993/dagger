@@ -85,6 +85,10 @@
 <td class="colFirst"><a href="#dagger.android">dagger.android</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#dagger.android.support">dagger.android.support</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -94,6 +98,21 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a> in <a href="../../../dagger/android/package-summary.html">dagger.android</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../dagger/android/package-summary.html">dagger.android</a> that implement <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../dagger/android/DispatchingAndroidInjector.html" title="class in dagger.android">DispatchingAndroidInjector</a>&lt;T&gt;</span></code>
+<div class="block">Performs members-injection on instances of core Android types (e.g.</div>
+</td>
+</tr>
+</tbody>
+</table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../dagger/android/package-summary.html">dagger.android</a> that return <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -102,20 +121,104 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app">Activity</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasActivityInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/HasActivityInjector.html#activityInjector--">activityInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app"><code>Activity</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected abstract <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;? extends <a href="../../../dagger/android/DaggerApplication.html" title="class in dagger.android">DaggerApplication</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerApplication.</span><code><span class="memberNameLink"><a href="../../../dagger/android/DaggerApplication.html#applicationInjector--">applicationInjector</a></span>()</code>
+<div class="block">Implementations should return an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> for the concrete <a href="../../../dagger/android/DaggerApplication.html" title="class in dagger.android"><code>DaggerApplication</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content">BroadcastReceiver</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasBroadcastReceiverInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/HasBroadcastReceiverInjector.html#broadcastReceiverInjector--">broadcastReceiverInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="../../../dagger/android/AndroidInjector.Builder.html" title="type parameter in AndroidInjector.Builder">T</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">AndroidInjector.Builder.</span><code><span class="memberNameLink"><a href="../../../dagger/android/AndroidInjector.Builder.html#build--">build</a></span>()</code>
 <div class="block">Returns a newly-constructed <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a>.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasContentProviderInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/HasContentProviderInjector.html#contentProviderInjector--">contentProviderInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content"><code>ContentProvider</code></a>s.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/content/ContentProvider.html?is-external=true" title="class or interface in android.content">ContentProvider</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerApplication.</span><code><span class="memberNameLink"><a href="../../../dagger/android/DaggerApplication.html#contentProviderInjector--">contentProviderInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="../../../dagger/android/AndroidInjector.Factory.html" title="type parameter in AndroidInjector.Factory">T</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">AndroidInjector.Factory.</span><code><span class="memberNameLink"><a href="../../../dagger/android/AndroidInjector.Factory.html#create-T-">create</a></span>(<a href="../../../dagger/android/AndroidInjector.Factory.html" title="type parameter in AndroidInjector.Factory">T</a>&nbsp;instance)</code>
 <div class="block">Creates an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> for <code>instance</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="../../../dagger/android/AndroidInjector.Builder.html" title="type parameter in AndroidInjector.Builder">T</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">AndroidInjector.Builder.</span><code><span class="memberNameLink"><a href="../../../dagger/android/AndroidInjector.Builder.html#create-T-">create</a></span>(<a href="../../../dagger/android/AndroidInjector.Builder.html" title="type parameter in AndroidInjector.Builder">T</a>&nbsp;instance)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasFragmentInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/HasFragmentInjector.html#fragmentInjector--">fragmentInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app"><code>Fragment</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerFragment.</span><code><span class="memberNameLink"><a href="../../../dagger/android/DaggerFragment.html#fragmentInjector--">fragmentInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerActivity.</span><code><span class="memberNameLink"><a href="../../../dagger/android/DaggerActivity.html#fragmentInjector--">fragmentInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Service.html?is-external=true" title="class or interface in android.app">Service</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasServiceInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/HasServiceInjector.html#serviceInjector--">serviceInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/app/Service.html?is-external=true" title="class or interface in android.app"><code>Service</code></a>s.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="dagger.android.support">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a> in <a href="../../../dagger/android/support/package-summary.html">dagger.android.support</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../dagger/android/support/package-summary.html">dagger.android.support</a> that return <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected abstract <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;? extends <a href="../../../dagger/android/support/DaggerApplication.html" title="class in dagger.android.support">DaggerApplication</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerApplication.</span><code><span class="memberNameLink"><a href="../../../dagger/android/support/DaggerApplication.html#applicationInjector--">applicationInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerAppCompatActivity.</span><code><span class="memberNameLink"><a href="../../../dagger/android/support/DaggerAppCompatActivity.html#fragmentInjector--">fragmentInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">HasSupportFragmentInjector.</span><code><span class="memberNameLink"><a href="../../../dagger/android/support/HasSupportFragmentInjector.html#supportFragmentInjector--">supportFragmentInjector</a></span>()</code>
+<div class="block">Returns an <a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android"><code>AndroidInjector</code></a> of <a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app"><code>Fragment</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerFragment.</span><code><span class="memberNameLink"><a href="../../../dagger/android/support/DaggerFragment.html#supportFragmentInjector--">supportFragmentInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../dagger/android/AndroidInjector.html" title="interface in dagger.android">AndroidInjector</a>&lt;<a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html?is-external=true" title="class or interface in android.support.v4.app">Fragment</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DaggerAppCompatActivity.</span><code><span class="memberNameLink"><a href="../../../dagger/android/support/DaggerAppCompatActivity.html#supportFragmentInjector--">supportFragmentInjector</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -171,6 +274,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012���2017 The Dagger Authors. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>

@@ -95,10 +95,8 @@
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Documented.html?is-external=true" title="class or interface in java.lang.annotation">@Documented</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true" title="class or interface in java.lang.annotation">@Target</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Target.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html?is-external=true#ANNOTATION_TYPE" title="class or interface in java.lang.annotation">ANNOTATION_TYPE</a>)
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true" title="class or interface in java.lang.annotation">@Retention</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Retention.html?is-external=true#value--" title="class or interface in java.lang.annotation">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html?is-external=true#RUNTIME" title="class or interface in java.lang.annotation">RUNTIME</a>)
- @Beta
 public @interface <span class="memberNameLabel">MapKey</span></pre>
-<div class="block">Identifies annotation types that are used to associate keys with values returned by
- <a href="../dagger/Provides.html" title="annotation in dagger">provider methods</a> in order to compose a <a href="../dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings">map</a>.
+<div class="block">Identifies annotation types that are used to associate keys with values returned by <a href="../dagger/Provides.html" title="annotation in dagger">provider methods</a> in order to compose a <a href="../dagger/multibindings/IntoMap.html" title="annotation in dagger.multibindings">map</a>.
 
  <p>Every provider method annotated with <code>@Provides</code> and <code>@IntoMap</code> must also have an
  annotation that identifies the key for that map entry. That annotation's type must be annotated
@@ -106,8 +104,7 @@ public @interface <span class="memberNameLabel">MapKey</span></pre>
 
  <p>Typically, the key annotation has a single member, whose value is used as the map key.
 
- <p>For example, to add an entry to a <code>Map&lt;SomeEnum, Integer&gt;</code> with key
- <code>SomeEnum.FOO</code>, you could use an annotation called <code>@SomeEnumKey</code>:
+ <p>For example, to add an entry to a <code>Map&lt;SomeEnum, Integer&gt;</code> with key <code>SomeEnum.FOO</code>, you could use an annotation called <code>@SomeEnumKey</code>:
 
  <pre><code>
   @MapKey
@@ -135,7 +132,7 @@ public @interface <span class="memberNameLabel">MapKey</span></pre>
 
  <p>If <code>unwrapValue</code> is true, the annotation's single member can be any type except an
  array.
- 
+
  <p>See <a href="../dagger/multibindings/package-summary.html"><code>dagger.multibindings</code></a> for standard unwrapped map key annotations for keys that are
  boxed primitives, strings, or classes.
 
@@ -173,8 +170,7 @@ public @interface <span class="memberNameLabel">MapKey</span></pre>
  order to call <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true#get-java.lang.Object-" title="class or interface in java.util"><code>Map.get(Object)</code></a> on the provided map.)</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="http://google.github.io/dagger/multibindings#map-multibindings">Map
-      multibinding</a></dd>
+<dd><a href="https://google.github.io/dagger/multibindings#map-multibindings">Map multibinding</a></dd>
 </dl>
 </li>
 </ul>
@@ -300,6 +296,6 @@ public @interface <span class="memberNameLabel">MapKey</span></pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &copy; 2012���2017 The Dagger Authors. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &copy; 2012&ndash;2017 The Dagger Authors. All rights reserved.</small></p>
 </body>
 </html>
