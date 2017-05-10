@@ -70,7 +70,7 @@ only one thread pool will be created.
 To build this graph, we use a `ProductionComponent`:
 
 ```java
-@ProductionComponent(modules = UserResponseModule.class)
+@ProductionComponent(modules = {UserResponseModule.class, ExecutorModule.class})
 interface UserResponseComponent {
   ListenableFuture<Html> html();
 }
