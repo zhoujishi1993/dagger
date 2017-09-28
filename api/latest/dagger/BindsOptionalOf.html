@@ -113,23 +113,29 @@ public @interface <span class="memberNameLabel">BindsOptionalOf</span></pre>
  <p>A <code>@BindsOptionalOf</code> method:
 
  <ul>
- <li>must be <code>abstract</code>
- <li>may have a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject">qualifier</a> annotation
- <li>must not return <code>void</code>
- <li>must not have parameters
- <li>must not throw exceptions
- <li>must not return an unqualified type with an <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>@Inject</code></a>-annotated constructor,
-     since such a type is always present
+   <li>must be <code>abstract</code>
+   <li>may have a <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Qualifier.html?is-external=true" title="class or interface in javax.inject">qualifier</a> annotation
+   <li>must not return <code>void</code>
+   <li>must not have parameters
+   <li>must not throw exceptions
+   <li>must not return an unqualified type with an <a href="https://docs.oracle.com/javaee/7/api/javax/inject/Inject.html?is-external=true" title="class or interface in javax.inject"><code>@Inject</code></a>-annotated constructor,
+       since such a type is always present
  </ul>
 
  <p>Other bindings may inject any of:
 
  <ul>
- <li><code>Optional&lt;Foo&gt;</code>
- <li><code>Optional&lt;Provider&lt;Foo&gt;&gt;</code>
- <li><code>Optional&lt;Lazy&lt;Foo&gt;&gt;</code>
- <li><code>Optional&lt;Provider&lt;Lazy&lt;Foo&gt;&gt;&gt;</code>
+   <li><code>Optional&lt;Foo&gt;</code> (unless there is a <code>@Nullable</code> binding for <code>Foo</code>; see
+       below)
+   <li><code>Optional&lt;Provider&lt;Foo&gt;&gt;</code>
+   <li><code>Optional&lt;Lazy&lt;Foo&gt;&gt;</code>
+   <li><code>Optional&lt;Provider&lt;Lazy&lt;Foo&gt;&gt;&gt;</code>
  </ul>
+
+ <p>If there is a binding for <code>Foo</code>, and that binding is <code>@Nullable</code>, then it is a
+ compile-time error to inject <code>Optional&lt;Foo&gt;</code>, because <code>Optional</code> cannot contain
+ <code>null</code>. You can always inject the other forms, because <code>Provider</code> and <a href="../dagger/Lazy.html" title="interface in dagger"><code>Lazy</code></a>
+ can always return <code>null</code> from their <code>get()</code> methods.
 
  <p>Explicit bindings for any of the above will conflict with a <code>@BindsOptionalOf</code> binding.
 
@@ -137,9 +143,10 @@ public @interface <span class="memberNameLabel">BindsOptionalOf</span></pre>
  binding can depend on any of:
 
  <ul>
- <li><code>Optional&lt;Foo&gt;</code>
- <li><code>Optional&lt;Producer&lt;Foo&gt;&gt;</code>
- <li><code>Optional&lt;Produced&lt;Foo&gt;&gt;</code>
+   <li><code>Optional&lt;Foo&gt;</code>
+       <!-- TODO(dpb): Update this once producers support nullability checks -->
+   <li><code>Optional&lt;Producer&lt;Foo&gt;&gt;</code>
+   <li><code>Optional&lt;Produced&lt;Foo&gt;&gt;</code>
  </ul>
 
  <p>You can inject either <code>com.google.common.base.Optional</code> or <code>java.util.Optional</code>.</div>
