@@ -25,6 +25,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.google.googlejavaformat.java.filer.FormattingFiler;
+
 import java.util.ServiceLoader;
 import java.util.Set;
 import javax.annotation.processing.Filer;
@@ -225,6 +226,11 @@ public final class ComponentProcessor extends BasicAnnotationProcessor {
                 bindingGraphFactory,
                 componentGenerator,
                 bindingGraphPlugins);
+
+    HelloWorldGenerator helloWorldGenerator = new HelloWorldGenerator(filer, elements);
+
+    SymEncGenerator symEncGenerator = new SymEncGenerator(filer, types, elements);
+
     return ImmutableList.of(
         new MapKeyProcessingStep(
             messager, types, mapKeyValidator, annotationCreatorGenerator, unwrappedMapKeyGenerator),
@@ -245,7 +251,9 @@ public final class ComponentProcessor extends BasicAnnotationProcessor {
             productionBindingFactory,
             producerFactoryGenerator),
         componentProcessingStep,
-        new BindingMethodProcessingStep(messager, anyBindingMethodValidator));
+        new BindingMethodProcessingStep(messager, anyBindingMethodValidator),
+        new HelloWorldProcessingStep(helloWorldGenerator, messager),
+            new SymEncProssingStep(symEncGenerator, messager));
   }
 
   @Override
