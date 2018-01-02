@@ -230,6 +230,7 @@ public final class ComponentProcessor extends BasicAnnotationProcessor {
     HelloWorldGenerator helloWorldGenerator = new HelloWorldGenerator(filer, elements);
 
     SymEncGenerator symEncGenerator = new SymEncGenerator(filer, types, elements);
+    SymEncValidator symEncValidator = new SymEncValidator(elements, types);
 
     return ImmutableList.of(
         new MapKeyProcessingStep(
@@ -253,7 +254,7 @@ public final class ComponentProcessor extends BasicAnnotationProcessor {
         componentProcessingStep,
         new BindingMethodProcessingStep(messager, anyBindingMethodValidator),
         new HelloWorldProcessingStep(helloWorldGenerator, messager),
-            new SymEncProssingStep(symEncGenerator, messager));
+            new SymEncProssingStep(symEncGenerator, symEncValidator, messager));
   }
 
   @Override

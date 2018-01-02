@@ -14,5 +14,5 @@ public @interface SymEncrypt {
     String algorithm() default EncryptConstant.AES;
     String blockMode() default EncryptConstant.CBC;
     String paddingMode() default EncryptConstant.PKCS5PADDING;
-    int keySize() default 128;
+    int keySize() default EncryptConstant.KEYSIZE;
 }

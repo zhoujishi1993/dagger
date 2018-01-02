@@ -67,11 +67,11 @@ public class SymEncGenerator extends SourceFileGenerator<SymEncPara> {
         ClassName secureRandomClass = ClassName.get("java.security", "SecureRandom");
         addStatement(tryBuilder, makeAssignBlock(secureRandomClass, "secureRandom", makeNewBlock(CodeBlock.of("$T", secureRandomClass), Optional.empty())));
         addStatement(tryBuilder, makeAssignThisBlock("ivParameterSpec", makeNewBlock(CodeBlock.of("$T", ClassName.get("javax.crypto.spec", "IvParameterSpec")), Optional.of(makeInvokeCodeBlock(CodeBlock.of("$L", "secureRandom"), "generateSeed", Optional.of(CodeBlock.of("16")))))));
-        addStatement(tryBuilder, makeAssignBlock(ClassName.get("javax.crypto", "KeyGenerator"),"keyGenerator", makeInvokeCodeBlock(CodeBlock.of("$L", "KeyGenerator"), "getInstance", Optional.of(CodeBlock.of("\"AES\"")))));
-        addStatement(tryBuilder, makeInvokeCodeBlock(CodeBlock.of("$L","keyGenerator"), "init", Optional.of(CodeBlock.of("128"))));
+        addStatement(tryBuilder, makeAssignBlock(ClassName.get("javax.crypto", "KeyGenerator"),"keyGenerator", makeInvokeCodeBlock(CodeBlock.of("$L", "KeyGenerator"), "getInstance", Optional.of(CodeBlock.of("\"$L\"", input.algorithm())))));
+        addStatement(tryBuilder, makeInvokeCodeBlock(CodeBlock.of("$L","keyGenerator"), "init", Optional.of(CodeBlock.of("$L", String.valueOf(input.keySize())))));
         addStatement(tryBuilder, makeAssignThisBlock("secretKey", makeInvokeCodeBlock(CodeBlock.of("$L", "keyGenerator"), "generateKey", Optional.empty())));
         //This line may have bugs because of $L
-        addStatement(tryBuilder, makeAssignThisBlock( "algorithms", CodeBlock.of("\"AES/CBC/PKCS5Padding\"")));
+        addStatement(tryBuilder, makeAssignThisBlock( "algorithms", CodeBlock.of("\"$L/$L/$L\"", input.algorithm(), input.blockMode(), input.paddingMode())));
         addStatement(tryBuilder, makeAssignThisBlock("cipher", makeInvokeCodeBlock(CodeBlock.of("$L", "Cipher"), "getInstance", Optional.of(CodeBlock.of("algorithms")))));
 
 

@@ -175,6 +175,7 @@ java_library(
         "MultibindsMethodValidator.java",
         "ProducesMethodValidator.java",
         "ProvidesMethodValidator.java",
+        "SymEncValidator.java",
         "ValidationReport.java",
     ],
     plugins = CODEGEN_PLUGINS,

@@ -9,4 +9,5 @@ public class EncryptConstant {
 
     public static final String PKCS5PADDING = "PKCS5PADDING";
 
+    public static final int KEYSIZE = 128;
 }
